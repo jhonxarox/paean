@@ -1,0 +1,9 @@
+<h1>{{ movie.name }}</h1>
+<img src="{{ movie.img_path }}" alt="{{ movie.name }}">
+<p>Genre: {{ movie.genre|join:", " }}</p>
+<p>Language: {{ movie.language }}</p>
+<p>Duration: {{ movie.duration }} min</p>
+<p>User Rating: {{ movie.user_rating }}</p>
+<p>MPAA Rating: {{ movie.mpaa_rating_type }} ({{ movie.mpaa_rating_label }})</p>
+<p>{{ movie.description }}</p>
+<a href="{% url 'movie_list' %}">Back to Listing</a>
